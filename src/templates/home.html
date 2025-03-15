@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block head_title %}home.html - {{block.super}}{% endblock head_title %}
+
+{% block content %}
+<h1>from block</h1>
+
+<h2>{% include "snippet/user.auth.html" %}</h2>
+
+<span>total page visit : {{total_page_visit}}</span><br>
+<span>page visit : {{page_visit}}</span>
+
+{% endblock content %}
