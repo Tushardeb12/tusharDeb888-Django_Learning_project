@@ -3,11 +3,11 @@
 {% block head_title %}home.html - {{block.super}}{% endblock head_title %}
 
 {% block content %}
-<h1>from block</h1>
+<h1 class="text-gray-900 dark:text-white">from block</h1>
 
 <h2>{% include "snippet/user.auth.html" %}</h2>
 
 <span>total page visit : {{total_page_visit}}</span><br>
-<span>page visit : {{page_visit}}</span>
+<span>page visit : {{page_visit}}</span><br>
 
 {% endblock content %}
