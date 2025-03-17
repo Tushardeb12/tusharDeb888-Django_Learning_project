@@ -27,7 +27,7 @@ DEBUG = config("ENV_VARIBLE", cast = bool)
 print("DEBUG", DEBUG, type(DEBUG))
 
 ALLOWED_HOSTS = [
-    ".vercel.app",
+    ".railway.app",
 ]
 if DEBUG:
     ALLOWED_HOSTS +=[
