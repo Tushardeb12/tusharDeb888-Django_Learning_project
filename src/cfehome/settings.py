@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("ENV_VARIBLE", cast = bool)
+DEBUG = config("DEBUG", cast = bool)
 print("DEBUG", DEBUG, type(DEBUG))
 
 ALLOWED_HOSTS = [
@@ -91,15 +91,15 @@ DATABASES = {
     }
 }
 
-DATABSE_URL = config("DATABSE_URL", cast = str)
-CONN_MAX_AGR = config("CONN_MAX_AGR", cast = int, default = 30)
+DATABASE_URL = config("DATABASE_URL", cast = str)
+CONN_MAX_AGE = config("CONN_MAX_AGE", cast = int, default = 30)
 
-if DATABSE_URL is not None:
+if DATABASE_URL is not None:
     import dj_database_url
     DATABASES = {
         "default": dj_database_url.config(
-            default=DATABSE_URL,
-            conn_max_age=CONN_MAX_AGR,
+            default=DATABASE_URL,
+            conn_max_age=CONN_MAX_AGE,
             conn_health_checks=True,
             )
     }
