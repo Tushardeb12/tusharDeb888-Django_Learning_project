@@ -29,6 +29,7 @@ print("DEBUG", DEBUG, type(DEBUG))
 
 ALLOWED_HOSTS = [
     ".railway.app",
+    "tushardeb888-djangolearningpro-production.up.railway.app"
 ]
 if DEBUG:
     ALLOWED_HOSTS +=[
